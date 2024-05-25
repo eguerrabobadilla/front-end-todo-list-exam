@@ -1,6 +1,6 @@
 # Todo list App (Front End) Ionic Angular
   Aplicación de lista de tareas hecha en Ionic y Angular.
-
+  Se utilizaron nuevas características de angular 16 como, Signals, inyección de dependencia directa.
   
 
 

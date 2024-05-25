@@ -19,5 +19,4 @@
 - ionic serve
 - abrir en  http://localhost:8101
 
-
-![todoList](https://github.com/eguerrabobadilla/front-end-todo-list-exam/assets/20071352/42b3a334-15a1-44e1-86c5-f57f0e0d192e)
+![2](https://github.com/eguerrabobadilla/front-end-todo-list-exam/assets/20071352/04475fad-0df0-4f94-babd-254dea2721f4)

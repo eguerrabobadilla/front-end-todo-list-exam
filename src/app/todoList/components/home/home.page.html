@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Todo List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button  (click)="openModal()">
+      <ion-icon  name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div *ngIf="noTask" class="centered-content">
+    <ion-icon name="alert-circle"></ion-icon>
+    <p>No cuentas con ninguna tarea. Para agregar una, presiona el botón inferior derecho.</p>
+  </div>
+  <list-task-component></list-task-component>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-title>Tarea</ion-title>
+    <ion-buttons slot="end">
+      <ion-button type="submit" (click)="confirm()" [strong]="true">Confirmar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+    <form [formGroup]="frmLogin" (ngSubmit)="confirm()" >
+      <ion-item>
+          <ion-input labelPlacement="stacked" label="Titulo"  formControlName="title" placeholder="titulo de la tarea"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea [autoGrow]="true" labelPlacement="stacked" label="Subtitulo"  formControlName="description" placeholder="subtitulo de la tarea"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-toggle formControlName="isCompleted" [disabled]="!isEditing" [enableOnOffLabels]="true">Tarea Completada?</ion-toggle>
+      </ion-item>
+  </form>
+</ion-content>

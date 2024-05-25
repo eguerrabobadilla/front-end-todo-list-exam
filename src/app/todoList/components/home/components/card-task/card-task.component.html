@@ -1,0 +1,17 @@
+<ion-card (click)="openModal()">
+  <ion-card-header>
+    <ion-card-title>{{ data.title }}</ion-card-title>
+
+  </ion-card-header>
+  <ion-card-content>
+    {{ data.description }}
+  </ion-card-content>
+  <div class="ion-text-end">
+
+      <ion-button color="danger" shape="round" fill="outline" (click)="delete($event, data)">
+        Eliminar
+      <ion-icon slot="start"  name="trash-outline"></ion-icon>
+     </ion-button>
+     <ion-icon  *ngIf="data.isCompleted" class="icon" name="checkmark-done-circle-outline"></ion-icon>
+  </div>
+</ion-card>

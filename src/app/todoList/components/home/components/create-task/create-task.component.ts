@@ -48,6 +48,13 @@ export class CreateTaskComponent  implements OnInit {
   }
 
   confirm() {
+
+    if (this.frmLogin.invalid) {
+      // Marca todos los controles como tocados para activar los mensajes de error
+      this.frmLogin.markAllAsTouched();
+      console.log("entro al if de invalidos")
+      return;
+    }
     const {_id, title , description, isCompleted}:Task = this.frmLogin.value;
     const taskObservable = this.isEditing ? this.taskService.updateTask({_id ,title , description, isCompleted})
                                           : this.taskService.addTask({title , description, isCompleted:false});
@@ -56,6 +63,11 @@ export class CreateTaskComponent  implements OnInit {
       this.taskService.dispatchSignal();
       this.modalCtrl.dismiss();
     });
+  }
+
+  isInvalidField(field: string) {
+    const control = this.frmLogin.get(field);
+    return control!.touched && control!.invalid;
   }
 
 }

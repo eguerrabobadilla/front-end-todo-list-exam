@@ -50,10 +50,8 @@ export class CreateTaskComponent  implements OnInit {
   confirm() {
 
     if (this.frmLogin.invalid) {
-      // Marca todos los controles como tocados para activar los mensajes de error
-      this.frmLogin.markAllAsTouched();
-      console.log("entro al if de invalidos")
-      return;
+        this.frmLogin.markAllAsTouched();
+        return;
     }
     const {_id, title , description, isCompleted}:Task = this.frmLogin.value;
     const taskObservable = this.isEditing ? this.taskService.updateTask({_id ,title , description, isCompleted})

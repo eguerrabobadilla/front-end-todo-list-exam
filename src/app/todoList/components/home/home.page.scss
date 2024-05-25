@@ -1,4 +1,5 @@
 .centered-content {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,4 +11,18 @@
 .centered-content ion-icon {
   font-size: 48px;
   margin-bottom: 10px;
+}
+
+ion-fab {
+  padding: 18px;
+}
+
+img{
+  margin-left: 90px;
+  width: 38vw;
+  height: calc(50vw* 0.75);
+}
+
+p{
+  padding: 10px;
 }

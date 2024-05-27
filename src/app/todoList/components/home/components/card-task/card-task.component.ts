@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { CreateTaskComponent } from '../create-task/create-task.component';
 import { Task } from 'src/app/todoList/interface/list.interface';
 import { trashOutline, checkmarkDoneCircleOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { ApiService } from 'src/app/todoList/services/list.service';
+import { ionicStandaloneImports } from 'src/app/ionic-imports';
 
 @Component({
   selector: 'card-task-component',
   templateUrl: './card-task.component.html',
   styleUrls: ['./card-task.component.scss'],
   standalone: true,
-  imports: [IonicModule , CommonModule, CreateTaskComponent, ],
+  imports: [...ionicStandaloneImports , CommonModule, CreateTaskComponent, ],
 })
 export class CardTaskComponent  implements OnInit {
 

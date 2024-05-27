@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController, IonicModule } from '@ionic/angular';
 import { firstValueFrom } from 'rxjs';
 import { Task } from 'src/app/todoList/interface/list.interface';
 import { ApiService } from 'src/app/todoList/services/list.service';
+import { ionicStandaloneImports } from 'src/app/ionic-imports';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { ApiService } from 'src/app/todoList/services/list.service';
   templateUrl: './create-task.component.html',
   styleUrls: ['./create-task.component.scss'],
   standalone: true,
-  imports: [IonicModule,  CommonModule, FormsModule, ReactiveFormsModule ]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ...ionicStandaloneImports],
+  providers: []
 })
 export class CreateTaskComponent  implements OnInit {
 

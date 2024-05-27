@@ -2,6 +2,16 @@
   Aplicación de lista de tareas hecha en Ionic y Angular.
   Se utilizaron nuevas características de angular 16 como, Signals, inyección de dependencia directa.
   
+## Docker desktop
+
+1.- Descargar Docker desktop https://www.docker.com/products/docker-desktop
+
+2.- Descargar el archivo https://github.com/eguerrabobadilla/front-end-todo-list-exam/blob/main/docker-compose.yml 
+
+3.- docker-compose up
+
+3.- http://localhost/home
+
 
 
 ## Versiones 
@@ -11,7 +21,7 @@
 
 
 
-## Run
+## Run local
 
 
 - git clone https://github.com/eguerrabobadilla/front-end-todo-list-exam.git

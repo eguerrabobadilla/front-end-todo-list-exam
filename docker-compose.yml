@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+
+  betodolist:
+    image: eguerrabobadilla/betodolist
+    ports:
+      - "3001:3001"
+    links:
+      - mongo
+
+  mongo:
+    image: mongo:5.0.16
+    ports:
+      - "27017:27017"
+  fetodolist:
+     image: eguerrabobadilla/todolist12
+     ports:
+       - "80:80"

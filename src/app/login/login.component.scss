@@ -1,0 +1,199 @@
+ion-content{
+  width: 100%;
+  height: 100%;
+}
+.login-fondo {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+}
+.card {
+  width: 100%;
+  height: 82%;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  border-bottom-left-radius: 140px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  background: #9448f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-content {
+  position: absolute;
+  width: 100%;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: "Volte-Bold";
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-bottom: 23px;
+}
+
+.input-redondeado {
+  --border-radius: 56px;
+  --padding-top: 20px;
+  position: relative;
+}
+
+.inputText {
+  background: white;
+  border-radius: 56px;
+  color: #7f7f7f;
+  font-size: 14px;
+  font-family: "Volte-Regular";
+  font-weight: 400;
+  height: 40px;
+  padding-left: 75px !important;
+  padding-right: 35px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  --border-color: transparent !important;
+  --highlight-color-focused: transparent !important;
+  --highlight-color-valid: transparent !important;
+  --highlight-color-invalid: transparent !important;
+  --highlight-color: transparent !important;
+}
+
+.message-error {
+  color: white;
+  font-size: 16px;
+  font-family: "Volte-Regular";
+  font-weight: 500;
+  word-wrap: break-word;
+}
+.message-error-bold {
+  color: white;
+  font-size: 16px;
+  font-family: "Volte-bold";
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.boton-label {
+  color: white;
+  font-size: 20px;
+  font-family: "Volte-Bold";
+  font-weight: 700;
+  word-wrap: break-word;
+  text-transform: capitalize;
+}
+
+.boton-estilo {
+  width: 183px;
+  height: 35px;
+  --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  --border-radius: 77px;
+  color: white;
+  transition: background-color 0.3s ease;
+  --background: var(--ion-color-secondary);
+  --background-activated: var(--ion-color-primary) !important;
+  --background-focused: var(--ion-color-primary) !important;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.img-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 45px;
+  z-index: 2;
+}
+
+.logo_lbs_blanco {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  width: 108px;
+  z-index: 9;
+}
+.container-logo-lbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 33px;
+  background: white;
+  width: 59px;
+  height: 59px;
+  z-index: 20;
+}
+.center-container-logo-lbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linea {
+margin-left: 0;
+  width: 30px;
+  height: 5px;
+  background: #ecaf12;
+  border: 1px solid #ecaf12;
+  margin-bottom: 26px;
+}
+
+:-webkit-autofill {
+  background: transparent !important;
+}
+//normal iphone 12
+
+
+//iphone SE 375px
+@media screen and (max-width: 375px) {
+  .card{
+    height: 82%;
+  }
+}
+//iphone XR , iphone 14 pro max
+@media screen and (min-width: 414px) and (max-width: 430px) {
+  .card{
+    height: 81%;
+  }
+}
+
+//samsung galaxy s20 ultra
+@media screen and (width: 412px) and (height: 915px) {
+  .card{
+    height: 82%;
+  }
+}
+//iphone 6/7/8 plus
+@media screen and (width: 414px) and (height: 736px) {
+  .card{
+    height: 77%;
+  }
+}
+//tablet ipad mini 768px
+@media screen and (min-width: 768px) {
+  .card{
+    height: 70%;
+  }
+  .logo_lbs_blanco {
+    width: 208px;
+  }
+  .container-logo-lbs {
+    width: 70px;
+    height: 70px;
+    bottom: 84px;
+  }
+}
+//tablet ipad Air, ipad pro 820px
+@media screen and (min-width: 820px) {
+  .card{
+    height: 70%;
+  }
+}

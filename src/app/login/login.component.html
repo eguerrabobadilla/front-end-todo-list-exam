@@ -1,0 +1,63 @@
+<ion-content [scrollY]="false" [scrollX]="false">
+
+  <ion-card class="card">
+
+      <ion-card-content class="card-content" style="max-width:402px;">
+          <hr class="linea" />
+          <div class="titulo">
+              Inicia Sesión.
+          </div>
+          <form [formGroup]="frmLogin" (ngSubmit)="onLogin()" >
+
+              <div class="input-redondeado" style="margin-bottom: 21px;">
+                  <ion-input
+                      formControlName="usuario"
+                      type="email"
+                      class="inputText"
+                      placeholder="Usuario">
+                      <ion-img class="img-input" style="width: 11px; height: 10px;" src="./assets/icon/usuario.svg" alt="usuario"/>
+                  </ion-input>
+              </div>
+
+              <div class="input-redondeado" style="margin-bottom: 43px;">
+                  <ion-input
+                      (keyup.enter)="onLogin()"
+                      clear-on-edit="false"
+                      formControlName="password"
+                      type="password"
+                      class="inputText"
+                      placeholder="Contraseña">
+                      <ion-img class="img-input" style="width: 11px; height: 12px; " src="./assets/icon/password.svg" alt="password"/>
+                  </ion-input>
+              </div>
+
+              <div style=" display: flex; justify-content: center;">
+                      <ion-button class="boton-estilo" size="small" type="submit">
+                          <span class="boton-label">¡Entrar!</span>
+                      </ion-button>
+              </div>
+
+          </form>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-alert
+      mode="ios"
+      [isOpen]="isLoginError"
+      header="Alerta"
+      message={{msgErr}}
+      [buttons]="alertButtons"
+      (didDismiss)="setOpen(false)">
+    </ion-alert>
+
+
+    <div class="center-container-logo-lbs">
+          <div class="container-logo-lbs">
+              <ion-img class="logo-lbs" src="./assets/icon/Logo_LBS_2.svg" alt="logo_lbs" />
+          </div>
+      </div>
+
+  <ion-img class="logo_lbs_blanco" src="./assets/icon/logo_lbs_blanco.svg" alt="logo_lbs_blanco" />
+
+  <ion-img class="login-fondo" src="./assets/imgs/login-fondo.png" alt="login-fondo" />
+  </ion-content>
